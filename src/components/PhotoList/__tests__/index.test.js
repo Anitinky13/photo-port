@@ -1,19 +1,18 @@
+// __tests__/PhotoList.test.js
 import React from "react";
 import { render, cleanup } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
-import About from "..";
+import PhotoList from "..";
 
 afterEach(cleanup);
 
-describe("About component renders", () => {
-  // First Test
+describe("PhotoList component", () => {
   it("renders", () => {
-    render(<About />);
+    render(<PhotoList />);
   });
 
-  it("matches snapshot DOM node structure", () => {
-    const { asFragment } = render(<About />);
-
+  it("renders", () => {
+    const { asFragment } = render(<PhotoList />);
     expect(asFragment()).toMatchSnapshot();
   });
 });
